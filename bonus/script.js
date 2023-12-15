@@ -9,9 +9,14 @@ function clearTitle() {
 }
 
 function addTitle(character) {
-    clearTitle();
     const characterID = document.getElementById(character.toLowerCase());
-    characterID.title = "Presentado";
+    if (characterID.title == "Presentado") {
+        characterID.title = "";
+        spanText.innerText = "";
+    } else {
+        clearTitle();
+        characterID.title = "Presentado";
+    }
 }
 
 function shoWCharacter(character) {
